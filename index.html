@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Lab Studio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #f9f9f9, #e8f0ff);
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .tile {
+      display: flex;
+      align-items: center;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+
+    .tile:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .tile img {
+      width: 80px;
+      height: 80px;
+      border-radius: 20%;
+      object-fit: contain;
+      margin-right: 1.5rem;
+    }
+
+    .tile-content {
+      flex: 1;
+    }
+
+    .tile-content h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #222;
+    }
+
+    .tile-content p {
+      margin: 0.5rem 0 0;
+      color: #555;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.3rem 0.8rem;
+      font-size: 0.8rem;
+      font-weight: bold;
+      border-radius: 12px;
+    }
+
+    .download {
+      background: #4CAF50;
+      color: white;
+    }
+
+    .coming-soon {
+      background: #FF9800;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Pixel Lab Studio
+  </header>
+
+  <main class="container">
+    <!-- Pebble Notes -->
+    <div class="tile" onclick="window.open('https://play.google.com/store/apps/details?id=com.koustav.pebble', '_blank')">
+      <img src="https://github.com/KOUSTAV2007/gif-host/raw/baaedc6f3ef72edc635cc3fcac5fc60c8a7cff32/app-icon.png" alt="Pebble Notes Logo">
+      <div class="tile-content">
+        <h2>Pebble Notes</h2>
+        <p>A simple and elegant notes app.</p>
+        <span class="badge download">Download</span>
+      </div>
+    </div>
+
+    <!-- CodeBox -->
+    <div class="tile">
+      <img src="https://via.placeholder.com/80x80.png?text=CodeBox" alt="CodeBox Logo">
+      <div class="tile-content">
+        <h2>CodeBox</h2>
+        <p>Your coding companion app.</p>
+        <span class="badge coming-soon">Coming Soon</span>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Pixel Lab Studio. All rights reserved.
+  </footer>
+
+</body>
+</html>
